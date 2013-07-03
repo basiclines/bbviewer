@@ -1,0 +1,49 @@
+/* Main views container */
+.wrapper {
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	transform: translate(0);
+	-webkit-transition: all 0.25s ease;
+}
+
+/* View positioning*/
+[data-viewport] {
+	position: absolute;
+	left: 0;
+	top: 5rem; /* Header height */
+	width: 100%;
+	height: calc(100% - 5rem);
+	border: none;
+	overflow: auto;
+	opacity: 0;
+	background: #fff;
+	transform: translate(0) scale(1);
+	transition: all 0.4s ease;
+}
+
+[data-viewport].active {
+	opacity: 1;
+	transform: translate(0) scale(1);
+	z-index: 1;
+	pointer-events: auto;
+}
+
+[data-viewport].notransition {
+	transition: none;
+}
+
+/* top/bottom */
+[data-viewport="before"] { transform: translateY(-100%); }
+[data-viewport="after"] { transform: translateY(100%); }
+
+/* left/right */
+[data-viewport="start"] { transform: translateX(-100%); }
+[data-viewport="end"] { transform: translateX(100%); }
+
+/* behind/above */
+[data-viewport="behind"],
+[data-viewport="above"] { pointer-events: none; }
+[data-viewport="behind"] { transform: scale(0.5); }
+[data-viewport="above"] { transform: scale(1.5); }

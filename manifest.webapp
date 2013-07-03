@@ -1,0 +1,14 @@
+{
+  "name": "Building Blocks",
+  "description": "A viewer for the building blocks on the device",
+  "launch_path": "app.html",
+  "icons": {
+    "120": "/gphx/icons/appicon.png",
+    "60": "/gphx/icons/appicon.png"
+  },
+  "developer": {
+    "name": "Ismael Gonzalez - @basiclines",
+    "url": "http://sweetbits.es"
+  },
+  "default_locale": "en"
+}
